@@ -1,0 +1,255 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 23,
+    "name": "Kadambari Nilaya",
+    "phone_number": "(+91) 974 251 7177",
+    "address": "Hanumantha Nagara, Bengaluru-19",
+    "website": "https://www.linkedin.com/in/vishesh-raaj-a26883157",
+    "language": "Kannada",
+    "location": {
+        "lat": -59.383494,
+        "lng": 33.427362
+    },
+    "types": [
+        "shoe park",
+        "shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Sun, 03 Jan 2021 10:52:51 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "a9871f747bd9ab5ed1d7e5ae9b786d41",
+    "scope": "APP",
+    "reference": "498da98bbeff9563bc1437a724572df7498da98bbeff9563bc1437a724572df7",
+    "id": "498da98bbeff9563bc1437a724572df7"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=a9871f747bd9ab5ed1d7e5ae9b786d41
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=a9871f747bd9ab5ed1d7e5ae9b786d41
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 03 Jan 2021 10:52:55 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 297
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-59.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "23",
+    "name": "Kadambari Nilaya",
+    "phone_number": "(+91) 974 251 7177",
+    "address": "Hanumantha Nagara, Bengaluru-19",
+    "types": "shoe park,shop",
+    "website": "https://www.linkedin.com/in/vishesh-raaj-a26883157",
+    "language": "Kannada"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 23,
+    "name": "Hanumagiri Nilaya",
+    "phone_number": "(+91) 974 251 7177",
+    "address": "SanjayLal Nagar, Haryana",
+    "website": "https://www.linkedin.com/in/vishesh-raaj-a26883157",
+    "language": "Panjabi",
+    "location": {
+        "lat": -59.383494,
+        "lng": 33.427362
+    },
+    "types": [
+        "shoe park",
+        "shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Sun, 03 Jan 2021 10:52:57 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "46f77e226b749ed82981007dd65a0fe0",
+    "scope": "APP",
+    "reference": "d373d991139dd33aba3b7b634b09fe57d373d991139dd33aba3b7b634b09fe57",
+    "id": "d373d991139dd33aba3b7b634b09fe57"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=46f77e226b749ed82981007dd65a0fe0
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=46f77e226b749ed82981007dd65a0fe0
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 03 Jan 2021 10:52:58 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 291
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-59.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "23",
+    "name": "Hanumagiri Nilaya",
+    "phone_number": "(+91) 974 251 7177",
+    "address": "SanjayLal Nagar, Haryana",
+    "types": "shoe park,shop",
+    "website": "https://www.linkedin.com/in/vishesh-raaj-a26883157",
+    "language": "Panjabi"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 23,
+    "name": "Samruddhi Nilaya",
+    "phone_number": "(+91) 974 251 7177",
+    "address": "Gavipuram Guttahalli, Bengaluru-19",
+    "website": "https://www.linkedin.com/in/vishesh-raaj-a26883157",
+    "language": "Tulu",
+    "location": {
+        "lat": -59.383494,
+        "lng": 33.427362
+    },
+    "types": [
+        "shoe park",
+        "shop"
+    ]
+}
+HTTP/1.1 200 OK
+Date: Sun, 03 Jan 2021 10:53:00 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "430674f3cfc62e9738ffd1ecb9528f5c",
+    "scope": "APP",
+    "reference": "4fe9d2e95488da5484efbf939157139f4fe9d2e95488da5484efbf939157139f",
+    "id": "4fe9d2e95488da5484efbf939157139f"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=430674f3cfc62e9738ffd1ecb9528f5c
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=430674f3cfc62e9738ffd1ecb9528f5c
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 03 Jan 2021 10:53:00 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 297
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-59.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "23",
+    "name": "Samruddhi Nilaya",
+    "phone_number": "(+91) 974 251 7177",
+    "address": "Gavipuram Guttahalli, Bengaluru-19",
+    "types": "shoe park,shop",
+    "website": "https://www.linkedin.com/in/vishesh-raaj-a26883157",
+    "language": "Tulu"
+}
