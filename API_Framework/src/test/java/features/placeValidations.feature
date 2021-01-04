@@ -1,6 +1,6 @@
 Feature: Validating Place API's 
 
-@AddPlace
+@AddPlace @Regresssion
 Scenario Outline: Verify if the place is successfully being added to AddPlaceAPI 
 
 	Given Add Place Payload with "<name>" "<language>" "<address>" 
@@ -23,7 +23,7 @@ Scenario Outline: Verify if the place is successfully being added to AddPlaceAPI
 		|Hanumagiri Nilaya |Panjabi |SanjayLal Nagar, Haryana|
 		|Samruddhi Nilaya  |Tulu    |Gavipuram Guttahalli, Bengaluru-19|
 	
-@DeletePlace	
+@DeletePlace @Regresssion
 Scenario: Verify If Delete place Functionality is working 
 
 	Given DeletePlace Payload 
