@@ -10,6 +10,7 @@
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Vishesh and Varsha/Desktop/Trainings/API Testing/04-19-2020/docs/json-path-4.3.0-javadoc.jar"/>
