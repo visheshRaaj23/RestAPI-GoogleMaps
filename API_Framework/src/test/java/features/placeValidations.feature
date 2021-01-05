@@ -17,6 +17,8 @@ Scenario Outline: Verify if the place is successfully being added to AddPlaceAPI
 	
 	#To Comment the lines
 	
+	
+	
 	Examples: 
 		|name              |language|address                           |
 		|Kadambari Nilaya  |Kannada | Hanumantha Nagara, Bengaluru-19  |
