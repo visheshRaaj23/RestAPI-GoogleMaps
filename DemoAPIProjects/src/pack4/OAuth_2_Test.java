@@ -29,7 +29,7 @@ public class OAuth_2_Test {
 	@Test
 	public void testOAuthService() throws Exception {
 		String getCodeUrl = "https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php&state=verifyjdss";
-		String currentURL = "https://rahulshettyacademy.com/getCourse.php?state=verifyjdss&code=4%2F0AY0e-g56jHfwKXTTUtWu-MW2ZebfqXjKNxnVMan_TM-pJKHh7bLtsFrcGqEpP75da7q6Sw&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none#";
+		String currentURL = "https://rahulshettyacademy.com/getCourse.php?state=verifyjdss&code=4%2F0AY0e-g5-MiTxAqxl1fdrlsqRlh4Zq06IjNU-e8cIpXJTlc_36rquG6qVRI3VoTdDaZZKaQ&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
 		String splittedUrl = currentURL.split("code=")[1];
 		String code = splittedUrl.split("&scope")[0];
 		System.out.println(code);

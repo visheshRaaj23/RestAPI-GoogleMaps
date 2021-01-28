@@ -34,7 +34,7 @@ public class Demo_Aa3 {
 		//Collection of Arrays -->Multidimensional Arrays
 		return new Object[][] {
 			{"Think and Grow Rich","VishUduu","232324","VisheshRaaj M"},
-			{"Sex and The City","VishUduupp","232325","VisheshRaaj M Udupa"},
+			{"SpiderMan and The City","VishUduupp","232325","VisheshRaaj M Udupa"},
 			{"Padmaavat","RanveerSingha","232324","visheshBhattt"},
 			{"BajiRaoMastani","RanveerSingh","232425","Ranveer singh"},
 			{"Ramleela","RanveerSingh24","232624","Deepika Padukne"}
