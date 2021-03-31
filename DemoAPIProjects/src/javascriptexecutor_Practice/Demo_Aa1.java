@@ -172,6 +172,33 @@ public class Demo_Aa1 {
 				.perform();
 	}
 
+	@Test
+	public void loginPageWindowSwitchPractice() throws Exception {
+		driver.findElement(By.className("blinkingText")).click();
+		String parentWindow = driver.getWindowHandle();
+		Set<String> windowsInvoked = driver.getWindowHandles();
+		for (String window : windowsInvoked) {
+			if (!window.equals(parentWindow)) {
+				driver.switchTo().window(window);
+				System.out.println(driver.getTitle());
+				break;
+			}
+		}
+		String trainerEmail = driver.findElement(By.xpath("//p[contains(text(),'email us')]//a")).getText();
+		driver.switchTo().window(parentWindow);
+		System.out.println(driver.getTitle());
+		driver.findElement(By.id("username")).sendKeys(trainerEmail);
+	}
+
+	@Test
+	public void dragAndDropFrames() throws Exception {
+		WebElement iFrame = driver.findElement(By.className("demo-frame"));
+		driver.switchTo().frame(iFrame);
+		Actions action = new Actions(driver);
+		action.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build()
+				.perform();
+	}
+
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(3000);
