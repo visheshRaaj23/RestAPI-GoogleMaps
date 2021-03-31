@@ -1,7 +1,11 @@
 package javascriptexecutor_Practice;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +16,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -24,6 +29,23 @@ public class Demo_Aa1 {
 
 	public static WebDriver driver;
 
+	public String getPropertyValue() throws Exception {
+		Properties properties;
+		InputStream stream = null;
+		String baseUrl = null;
+		try {
+			File file = new File("./data/application.properties");
+			stream = new FileInputStream(file);
+			properties = new Properties();
+			properties.load(stream);
+			Reporter.log(properties.getProperty("application_url"), true);
+			baseUrl = properties.getProperty("application_url");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return baseUrl;
+	}
+
 	@BeforeMethod
 	public void launchBrowser() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
@@ -31,7 +53,7 @@ public class Demo_Aa1 {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		// String url="https://rahulshettyacademy.com/AutomationPractice/";
-		String url = "https://www.path2usa.com/travel-companions";
+		String url = this.getPropertyValue();
 		driver.navigate().to(url);
 	}
 
@@ -135,6 +157,19 @@ public class Demo_Aa1 {
 			}
 		}
 
+	}
+
+	@Test
+	public void amazonAccountHover() {
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.xpath("//a[@id='nav-link-accountList']"))).contextClick().build()
+				.perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebElement searchBoxElement = driver.findElement(By.xpath("//input[contains(@id,'twotabsearchtextbox')]"));
+		wait.until(ExpectedConditions.visibilityOf(searchBoxElement));
+		// -----><Importent>
+		action.moveToElement(searchBoxElement).click().keyDown(Keys.SHIFT).sendKeys("iphone").doubleClick().build()
+				.perform();
 	}
 
 	@AfterMethod
