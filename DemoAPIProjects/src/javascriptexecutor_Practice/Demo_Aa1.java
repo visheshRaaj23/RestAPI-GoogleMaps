@@ -3,6 +3,8 @@ package javascriptexecutor_Practice;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -10,13 +12,19 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -24,6 +32,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class Demo_Aa1 {
 
@@ -48,10 +57,16 @@ public class Demo_Aa1 {
 
 	@BeforeMethod
 	public void launchBrowser() throws Exception {
+		DesiredCapabilities ds = DesiredCapabilities.chrome();
+		ds.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+		ds.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		ChromeOptions options = new ChromeOptions();
+		options.merge(ds);
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		// String url="https://rahulshettyacademy.com/AutomationPractice/";
 		String url = this.getPropertyValue();
 		driver.navigate().to(url);
@@ -197,6 +212,35 @@ public class Demo_Aa1 {
 		Actions action = new Actions(driver);
 		action.dragAndDrop(driver.findElement(By.id("draggable")), driver.findElement(By.id("droppable"))).build()
 				.perform();
+	}
+
+	@Test
+	public void takeScreenShotTest() throws Exception {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("./target/screenshots/screenshot23.png"));
+	}
+
+	@Test
+	public void testBrokenLinks() throws Exception {
+		// Xpath://div[@id='gf-BIG']//li/a
+		// Css :$('li[class*="gf-li"] a')
+		SoftAssert softAssert = new SoftAssert();
+		List<WebElement> footerLinks = driver.findElements(By.xpath("//div[@id='gf-BIG']//li/a"));
+		for (WebElement link : footerLinks) {
+			String linkUrl = link.getAttribute("href");
+			HttpURLConnection conn = (HttpURLConnection) new URL(linkUrl).openConnection();
+			conn.setRequestMethod("HEAD");
+			conn.connect();
+			int responseCode = conn.getResponseCode();
+			Reporter.log(link.getText() + " link Have the Status code of:" + responseCode,true);
+			softAssert.assertTrue(responseCode<400,link.getText() + " Is Broken!!Please re-verify and try Again");
+			/*
+			 * if (responseCode >= 400) { Assert.assertTrue(false);
+			 * Reporter.log(link.getText() + " Is Broken!!Please re-verify and try Again",
+			 * true); }
+			 */
+
+		}
 	}
 
 	@AfterMethod
