@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[https://rahulshettyacademy.com/seleniumPractise/#/offers]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14289" started-at="2020-12-31T17:55:45Z" finished-at="2020-12-31T17:55:59Z">
+  <suite name="Default suite" duration-ms="15960" started-at="2021-04-07T11:45:42Z" finished-at="2021-04-07T11:45:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14289" started-at="2020-12-31T17:55:45Z" finished-at="2020-12-31T17:55:59Z">
-      <class name="pack4.AddPlaceApi">
-        <test-method status="PASS" signature="addPlaceApi()[pri:0, instance:pack4.AddPlaceApi@1936f0f5]" name="addPlaceApi" duration-ms="14251" started-at="2020-12-31T23:25:45Z" finished-at="2020-12-31T23:25:59Z">
+    <test name="Default test" duration-ms="15960" started-at="2021-04-07T11:45:42Z" finished-at="2021-04-07T11:45:58Z">
+      <class name="javastreams.WebStreamsPractice">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:javastreams.WebStreamsPractice@2b6faea6]" name="launchBrowser" is-config="true" duration-ms="10577" started-at="2021-04-07T11:45:42Z" finished-at="2021-04-07T11:45:52Z">
+          <reporter-output>
+            <line>
+              <![CDATA[https://rahulshettyacademy.com/seleniumPractise/#/offers]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="filterWebTables()[pri:0, instance:javastreams.WebStreamsPractice@2b6faea6]" name="filterWebTables" duration-ms="1183" started-at="2021-04-07T11:45:52Z" finished-at="2021-04-07T11:45:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addPlaceApi -->
-      </class> <!-- pack4.AddPlaceApi -->
+        </test-method> <!-- filterWebTables -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:javastreams.WebStreamsPractice@2b6faea6]" name="tearDown" is-config="true" duration-ms="4115" started-at="2021-04-07T11:45:54Z" finished-at="2021-04-07T11:45:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- javastreams.WebStreamsPractice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
