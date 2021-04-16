@@ -38,7 +38,7 @@ public class Demo_Aa1 {
 
 	public static WebDriver driver;
 
-	public String getPropertyValue() throws Exception {
+	public static String getPropertyValue() throws Exception {
 		Properties properties;
 		InputStream stream = null;
 		String baseUrl = null;
